@@ -1,3 +1,8 @@
+production: &production
+  :url: redis://h:p4lerrouo05u3jegt7hq32vhvfh@ec2-54-83-32-60.compute-1.amazonaws.com:7179
+  :host: p4lerrouo05u3jegt7hq32vhvfh@ec2-54-83-32-60.compute-1.amazonaws.com
+  :port: 7179
+  :timeout: 1
 local: &local
   :url: redis://localhost:6379
   :host: localhost
