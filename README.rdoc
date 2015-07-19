@@ -1,0 +1,7 @@
+== README
+
+Derived from http://nithinbekal.com/posts/rails-action-cable/
+
+Added rails-react to render visual components
+
+In this case rails server acts as dispatcher, action-cable connects the state to the server and react views send actions to the server.

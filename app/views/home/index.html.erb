@@ -1,0 +1,12 @@
+
+<h1>Welcome</h1>
+<% if user_signed_in? %>
+  <p>Create new topic</p>
+  <%= form_for @topic do |f| %>
+    <%= f.text_field :name %>
+    <%= f.submit %>
+  <% end %>
+<% else %>
+  <p>Please login</p>
+  <%= link_to "Login", new_user_session_path %>
+<% end %>

@@ -1,0 +1,12 @@
+// Place all the styles related to the messages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.message-enter {
+  opacity: 0.01;
+}
+
+.message-enter.message-enter-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}
