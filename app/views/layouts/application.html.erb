@@ -10,9 +10,11 @@
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-  <ul class="header">
-    <%= render Topic.all %>
-  </ul>
+  <% if user_signed_in? %>
+    <ul class="header">
+      <%= render Topic.all %>
+    </ul>
+  <% end %>
 
 <%= yield %>
 

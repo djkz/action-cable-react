@@ -6,9 +6,9 @@ var Message = React.createClass({
 
   render: function() {
     return (
-      <div>
-        <div>User: {this.props.user}</div>
-        <div>Content: {this.props.content}</div>
+      <div className="message">
+        <div className="author">{this.props.user}</div>
+        <div className="content">{this.props.content}</div>
       </div>
     );
   }
