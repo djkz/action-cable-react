@@ -1,8 +1,10 @@
 <div id="messages"></div>
-<script>
-  window.messages = <%= @topic.messages.to_json.html_safe %>;
-  window.topic = <%= @topic.to_json.html_safe %>;
-</script>
+<div id="variables">
+  <script>
+    window.messages = <%= @topic.messages.to_json.html_safe %>;
+    window.topic = <%= @topic.to_json.html_safe %>;
+  </script>
+</div>
 
-<%= react_component('Messages') %>
+<%= react_component('Messages', {messages: @topic.messages , topic: @topic } ) %>
 

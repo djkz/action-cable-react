@@ -18,11 +18,16 @@
   background-color: #fafafa;
   margin-bottom: 5px;
   padding: 4px;
-  .author {
-    color: #8a8a8a;
+  min-height: 42px;
+  .gravatar {
+    display: block;
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
   }
+
   .content {
     color: #4a4a4a;
-
   }
 }

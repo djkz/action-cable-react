@@ -7,7 +7,7 @@ var Message = React.createClass({
   render: function() {
     return (
       <div className="message">
-        <div className="author">{this.props.user}</div>
+        <Gravatar email={this.props.user} />
         <div className="content">{this.props.content}</div>
       </div>
     );

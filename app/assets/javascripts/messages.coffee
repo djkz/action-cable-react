@@ -14,5 +14,10 @@ App.messages = App.cable.subscriptions.create 'MessagesChannel',
       @perform "follow", {topic_id: window.topic.id}
     , 100
 
+  reload: ->
+    eval $("#variables > script").html()
+    window.dispatchEvent(new_message)
+
 $(document).on 'page:change', -> App.messages.init()
+$(document).on 'page:restore', -> App.messages.reload()
   
