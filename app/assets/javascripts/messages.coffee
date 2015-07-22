@@ -6,18 +6,14 @@ new_message = new Event("new_message")
 
 App.messages = App.cable.subscriptions.create 'MessagesChannel',
   received: (data) ->
-    window.messages.push(data)
+    document.body.messages.push(data)
     window.dispatchEvent(new_message)
 
   init: ->
     setTimeout =>
-      @perform "follow", {topic_id: window.topic.id}
+      @perform "follow", {topic_id: document.body.topic.id}
     , 100
 
-  reload: ->
-    eval $("#variables > script").html()
-    window.dispatchEvent(new_message)
 
 $(document).on 'page:change', -> App.messages.init()
-$(document).on 'page:restore', -> App.messages.reload()
   

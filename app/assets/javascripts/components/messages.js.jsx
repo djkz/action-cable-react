@@ -1,11 +1,11 @@
 var Messages = React.createClass({
 
   updateState: function(e) {
-    this.setState({messages: window.messages});
+    this.setState({messages: document.body.messages});
   },
 
   getInitialState: function() {
-    return {messages: window.messages}
+    return {messages: document.body.messages, topic: document.body.topic }
   },
   
   componentWillMount: function() {
@@ -23,9 +23,9 @@ var Messages = React.createClass({
 
     return (
       <div>
-        <h2>{ window.topic.name }</h2>
+        <h2>{this.state.topic.name}</h2>
           { listItems }
-        <MessageForm topic={window.topic} />
+        <MessageForm topic={this.state.topic} />
       </div>
     );
   }
